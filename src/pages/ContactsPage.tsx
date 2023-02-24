@@ -80,7 +80,7 @@ const ContactsPage = () => {
           {showModal ? (
             <Modal handleBtnClick={toggleShowModal}>
               {!chosenContact.id ? (
-                <ContactForm closeModal={contactToggleShowModal} token={token} />
+                <ContactForm closeModal={contactToggleShowModal} />
               ) : (
                 <ChangeContactForm
                   contact={chosenContact}

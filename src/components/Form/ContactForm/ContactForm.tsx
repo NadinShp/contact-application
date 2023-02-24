@@ -6,8 +6,9 @@ import { addContact } from "../../../redux/contacts/thunk";
 import { contactSchema, Contact, ContactFormProps } from "./contactSchema";
 import FormGroupe from "../FormGroupe";
 
-const ContactForm = ({ closeModal, token }: ContactFormProps) => {
+const ContactForm = ({ closeModal }: ContactFormProps) => {
   const dispatch = useAppDispatch();
+  const token = useAppSelector((state) => state.user.user.token);
   const contacts = useAppSelector((state) => state.contacts.contacts);
   const startValues = {
     name: "",

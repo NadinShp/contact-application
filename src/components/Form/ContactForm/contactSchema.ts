@@ -18,5 +18,4 @@ export interface Contact extends InferType<typeof contactSchema> {
 
 export interface ContactFormProps {
   closeModal: (id: null) => void;
-  token: string;
 }
