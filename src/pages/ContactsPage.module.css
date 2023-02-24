@@ -1,0 +1,66 @@
+.wrapper {
+  padding-top: 20px;
+}
+.input {
+  border-radius: 5px;
+  border: 1px solid rgb(173, 81, 244);
+  padding: 5px 3px;
+  outline: none;
+  box-shadow: 3px 3px 3px #241d24;
+  padding: 5px 5px;
+}
+.input:hover,
+.input:focus {
+  box-shadow: 3px 3px 3px #241d24;
+  cursor: pointer;
+}
+.btn {
+  outline: none;
+  background-color: rgb(173, 81, 244);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  padding: 5px 8px;
+  box-shadow: 3px 3px 3px #241d24;
+  font-size: 16px;
+}
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #241d24;
+}
+.filterBtnWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 330px) {
+  .btn {
+    margin-bottom: 10px;
+  }
+  .input {
+    width: 100%;
+  }
+  .filterBtnWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 330px) and (max-width: 576px) {
+  .filterBtnWrapper {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .filterBtnWrapper {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filterBtnWrapper {
+    max-width: 768px;
+    margin: 0 auto;
+    width: 60%;
+  }
+}

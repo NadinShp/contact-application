@@ -1,0 +1,13 @@
+// Your variable overrides
+$body-bg: #dff0f7;
+// $body-color: #111;
+
+$theme-colors: (
+  "custom-error": tomato,
+  "custom-success": teal,
+  "purple": #a15dc0,
+  "white": #fff,
+);
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";

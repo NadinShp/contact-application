@@ -1,0 +1,16 @@
+.formWrapper {
+  margin: 0 auto;
+}
+.errorText {
+  color: #dc3545;
+}
+@media screen and (max-width: 576px) {
+  .formWrapper {
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .formWrapper {
+    max-width: 400px;
+  }
+}

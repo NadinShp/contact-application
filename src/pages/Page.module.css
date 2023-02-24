@@ -1,0 +1,27 @@
+.loginAddText {
+  text-align: center;
+  margin-top: 15px;
+}
+.loginRedirectLink {
+  color: #3c90f6;
+  text-decoration: underline;
+  margin-left: 3px;
+}
+.loginRedirectLink:hover,
+.loginRedirectLink:focus {
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #acacac;
+}
+.loginWrapper {
+  padding-top: 20px;
+}
+@media screen and (min-width: 576px) {
+  .loginWrapper {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .loginWrapper {
+    padding-top: 40px;
+  }
+}

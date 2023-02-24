@@ -1,0 +1,21 @@
+.wrapper {
+  background-color: rgba(243, 227, 239, 0.5);
+}
+.homeWrapper {
+  height: 100vh;
+  background-image: url("../images/book-small.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+@media screen and (min-width: 576px) {
+  .homeWrapper {
+    background-image: url("../images/book-medium.png");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .homeWrapper {
+    background-image: url("../images/book-large.png");
+    background-size: contain;
+  }
+}
