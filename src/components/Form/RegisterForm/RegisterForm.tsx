@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import { signUp } from "../../../redux/user/thunk";
 import { useAppDispatch } from "../../../hooks/hooks";
@@ -10,6 +10,7 @@ import "../Form.scss";
 
 const RegisterForm = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   return (
     <div className="formWrapper">
@@ -22,7 +23,7 @@ const RegisterForm = () => {
         validationSchema={userSchema}
         onSubmit={(values: formDataInterface) => {
           dispatch(signUp(values));
-          redirect("/login");
+          navigate("/login");
         }}
       >
         {({ values, errors, touched, handleChange, handleSubmit, handleBlur }) => (

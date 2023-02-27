@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+.thumb {
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
+}
 @media screen and (min-width: 576px) {
   .homeWrapper {
     background-image: url("../images/book-medium.png");

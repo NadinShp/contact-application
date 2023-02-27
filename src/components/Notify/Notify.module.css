@@ -1,0 +1,27 @@
+.wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  background-color: #f37171;
+  box-shadow: 2px 2px 2px #762929;
+}
+.btnNotification {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 2px;
+}
+.btnNotification:hover,
+.btnNotification:focus {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #acacac;
+}
+.notificationText {
+  text-align: center;
+}
