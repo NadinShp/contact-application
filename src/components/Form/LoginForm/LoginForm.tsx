@@ -26,10 +26,6 @@ const LoginForm = () => {
             localStorage.setItem("user", JSON.stringify(user));
             resetForm();
             navigate("/contacts");
-          } else {
-            if (answer.payload) {
-              console.log(`Error in Login Form", ${answer.payload.message}`);
-            }
           }
         }}
         validationSchema={userSchema}

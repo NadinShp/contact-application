@@ -22,9 +22,11 @@ const RegisterForm = () => {
         }}
         validationSchema={userSchema}
         onSubmit={async (values: formDataInterface, { resetForm }) => {
-          const res = await dispatch(signUp(values));
-          if (res) navigate("/login");
-          resetForm();
+          const answer = await dispatch(signUp(values));
+          if (signUp.fulfilled.match(answer)) {
+            resetForm();
+            navigate("/login");
+          }
         }}
       >
         {({ values, errors, touched, handleChange, handleSubmit, handleBlur, isValid, dirty }) => (

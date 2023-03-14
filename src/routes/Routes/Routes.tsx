@@ -45,8 +45,7 @@ const RoutesApp = () => {
         }
       };
     }
-  }, [error]);
-
+  }, [errorUser, errorContacts, error]);
   return (
     <div className={styles.wrapper}>
       <Suspense fallback={<Loader />}>

@@ -76,10 +76,10 @@ const ContactsPage = () => {
               placeholder="Filter contacts"
             />
           </div>
-          {contacts ? (
+          {contacts.length > 0 ? (
             <Contacts list={getFilteredContacts()} />
           ) : (
-            <p>You don't have contacts yet.</p>
+            <p className={styles.text}>You currently have no contacts. You can add them.</p>
           )}
           {showModal ? (
             <Modal handleBtnClick={toggleShowModal}>
