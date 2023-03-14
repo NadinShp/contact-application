@@ -1,8 +1,10 @@
-.wrapper {
+.totalHomeWrap {
+  overflow: hidden;
+  min-height: 100vh;
   background-color: rgba(243, 227, 239, 0.5);
 }
 .homeWrapper {
-  height: 100vh;
+  height: 80vh;
   background-image: url("../images/book-small.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -10,8 +12,8 @@
 }
 .thumb {
   max-width: 500px;
-  max-height: 500px;
-  margin: auto;
+  max-height: 80vh;
+  margin: 0 auto;
 }
 @media screen and (min-width: 576px) {
   .homeWrapper {

@@ -13,7 +13,7 @@ export const user: UserInterface = {
 export interface UserI {
   user: UserInterface;
   loading: boolean;
-  error: string | null | any | unknown;
+  error: string | null | undefined;
 }
 
 export type UserProp = {
@@ -25,7 +25,9 @@ export type UserRegister = {
   name: string;
   email: string;
 };
-
+export type ErrorProps = {
+  message: string;
+};
 export interface UserRegisterData {
   name: string;
   email: string;

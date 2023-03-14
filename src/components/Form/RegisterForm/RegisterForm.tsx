@@ -21,12 +21,13 @@ const RegisterForm = () => {
           password: "",
         }}
         validationSchema={userSchema}
-        onSubmit={(values: formDataInterface) => {
-          dispatch(signUp(values));
-          navigate("/login");
+        onSubmit={async (values: formDataInterface, { resetForm }) => {
+          const res = await dispatch(signUp(values));
+          if (res) navigate("/login");
+          resetForm();
         }}
       >
-        {({ values, errors, touched, handleChange, handleSubmit, handleBlur }) => (
+        {({ values, errors, touched, handleChange, handleSubmit, handleBlur, isValid, dirty }) => (
           <Form onSubmit={handleSubmit}>
             <FormGroupe
               name="name"
@@ -55,7 +56,12 @@ const RegisterForm = () => {
               touched={touched.password}
               values={values.password}
             />
-            <Button type="submit" variant="primary">
+            <Button
+              variant="primary"
+              type="submit"
+              className="btn btn-success"
+              disabled={!(isValid && dirty)}
+            >
               Sign up
             </Button>
           </Form>

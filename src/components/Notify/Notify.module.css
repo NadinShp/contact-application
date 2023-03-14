@@ -1,20 +1,25 @@
 .wrapper {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  font-weight: 600;
   transform: translate(-50%, -50%);
   padding: 10px 15px;
-  background-color: #f37171;
+  background-color: #f44336;
+  padding: 40px;
+  border-radius: 3px;
   box-shadow: 2px 2px 2px #762929;
+  color: #fff;
 }
 .btnNotification {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  background-color: transparent;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  padding: 0;
   border: none;
-  outline: none;
-  padding: 2px;
+  cursor: pointer;
+  color: #fff;
 }
 .btnNotification:hover,
 .btnNotification:focus {

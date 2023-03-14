@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 
 const HomePage = () => {
   return (
-    <>
+    <div className={styles.totalHomeWrap}>
       <Header />
       <div className={styles.wrapper}>
         <Container>
@@ -14,7 +14,7 @@ const HomePage = () => {
           </div>
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

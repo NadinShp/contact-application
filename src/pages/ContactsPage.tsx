@@ -48,7 +48,11 @@ const ContactsPage = () => {
   };
   function getFilteredContacts() {
     const normalizedFilter = filter.toLowerCase();
-    return contacts.filter((contact) => contact.name.toLowerCase().includes(normalizedFilter));
+    return contacts.filter(
+      (contact) =>
+        contact.name.toLowerCase().includes(normalizedFilter) ||
+        contact.number.includes(normalizedFilter)
+    );
   }
   const handleAddContact = () => {
     setChosenContact((prevState) => ({ ...prevState, id: null }));

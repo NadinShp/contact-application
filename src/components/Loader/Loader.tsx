@@ -1,15 +1,15 @@
-import React, { CSSProperties } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { CSSProperties } from "react";
+import DotLoader from "react-spinners/ClipLoader";
 
 const Loader = () => {
   const override: CSSProperties = {
     display: "block",
-    margin: "auto",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "150px",
   };
   const color = "#ad51f4";
-  return (
-    <ClipLoader color={color} cssOverride={override} size={150} aria-label="Loading Spinner" />
-  );
+  return <DotLoader color={color} cssOverride={override} size={50} aria-label="Loading Spinner" />;
 };
 
 export default Loader;

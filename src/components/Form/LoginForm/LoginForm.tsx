@@ -21,16 +21,20 @@ const LoginForm = () => {
         initialValues={startValues}
         onSubmit={async (values: User, { resetForm }) => {
           const answer = await dispatch(getLogin(values));
-          const user = await answer?.payload;
-          if (user) {
+          if (getLogin.fulfilled.match(answer)) {
+            const user = answer.payload;
             localStorage.setItem("user", JSON.stringify(user));
+            resetForm();
+            navigate("/contacts");
+          } else {
+            if (answer.payload) {
+              console.log(`Error in Login Form", ${answer.payload.message}`);
+            }
           }
-          resetForm();
-          navigate("/contacts");
         }}
         validationSchema={userSchema}
       >
-        {({ touched, errors, values, handleSubmit, handleChange, handleBlur }) => (
+        {({ touched, errors, values, handleSubmit, handleChange, handleBlur, dirty, isValid }) => (
           <Form onSubmit={handleSubmit}>
             <FormGroupe
               name="email"
@@ -50,7 +54,12 @@ const LoginForm = () => {
               touched={touched.password}
               values={values.password}
             />
-            <Button variant="primary" type="submit">
+            <Button
+              variant="primary"
+              type="submit"
+              className="btn btn-success"
+              disabled={!(isValid && dirty)}
+            >
               Submit
             </Button>
           </Form>

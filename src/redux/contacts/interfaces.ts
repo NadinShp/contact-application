@@ -26,3 +26,6 @@ export interface IdTokenContact {
 export interface changeContactWithToken extends newContactWithToken {
   id: string | null;
 }
+export type FetchContactError = {
+  message: string;
+};
